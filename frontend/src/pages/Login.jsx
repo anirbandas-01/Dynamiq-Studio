@@ -53,7 +53,7 @@ function Login() {
 
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
 
-        {/* Branding */}
+        
         <div className="mb-8 text-center">
 
           <h1 className="text-4xl font-bold text-black">
@@ -66,7 +66,7 @@ function Login() {
 
         </div>
 
-        {/* Login Form */}
+        
         <form
           onSubmit={handleLogin}
           className="space-y-4"
@@ -113,7 +113,7 @@ function Login() {
 
         </form>
 
-        {/* Register Link */}
+      
         <p className="text-center text-sm mt-6 text-gray-600">
 
           Don't have an account?

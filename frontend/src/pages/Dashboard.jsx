@@ -65,7 +65,7 @@ function Dashboard() {
 
       <div className="max-w-7xl mx-auto px-6 py-8">
 
-        {/* HERO SECTION */}
+        
 
         <div className="bg-[#EAE4D5] rounded-[28px] p-10 border border-[#d6d0c2]">
 
@@ -107,7 +107,7 @@ function Dashboard() {
 
         </div>
 
-        {/* STATS */}
+        
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
 
@@ -210,7 +210,7 @@ function Dashboard() {
                 className="bg-white rounded-[28px] p-7 border border-[#ECECEC] hover:border-[#BBD5DA] transition"
               >
 
-                {/* TOP */}
+                
 
                 <div className="flex items-start justify-between">
 
@@ -226,7 +226,7 @@ function Dashboard() {
 
                 </div>
 
-                {/* TITLE */}
+                
 
                 <div className="mt-7">
 
@@ -241,7 +241,7 @@ function Dashboard() {
 
                 </div>
 
-                {/* META */}
+                
 
                 <div className="mt-7 space-y-2 text-sm text-gray-500">
 

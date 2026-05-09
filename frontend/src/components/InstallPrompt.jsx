@@ -30,7 +30,7 @@ function InstallPrompt() {
 
     if (shouldShow) {
 
-      setTimeout(() => {
+      
 
         setShowPrompt(true);
 
@@ -39,7 +39,7 @@ function InstallPrompt() {
           setShowPrompt(false);
         }, 8000);
 
-      }, 2000);
+      
     }
   };
 

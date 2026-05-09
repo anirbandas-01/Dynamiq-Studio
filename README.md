@@ -9,8 +9,10 @@ A powerful full-stack application that enables users to create and manage dynami
 - 🔧 **Runtime Configuration** – Create applications dynamically using JSON-based field configurations
 - 📝 **Dynamic Forms** – Auto-generated forms based on your configuration
 - 📊 **Dynamic Tables** – Automatic table rendering with configured fields
-- 📤 **CSV Import** – Bulk data upload with field validation
+- 📤 **Enhanced CSV Import** – Preview, validate, and bulk upload data with detailed error reporting
 - 🔐 **Authentication** – Secure user registration and login using JWT
+- 🔔 **Real-time Notifications** – In-app notification system for app events and actions
+- 📱 **Mobile-Ready PWA** – Fully responsive design with Progressive Web App support
 - 🎨 **Modern UI** – Clean and responsive interface built with Tailwind CSS
 - ⚡ **Real-time Updates** – Instant feedback and data synchronization
 
@@ -111,11 +113,11 @@ Create the following tables in your Supabase project.
 
 ```sql
 CREATE TABLE users (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-  email TEXT UNIQUE NOT NULL,
-  password TEXT NOT NULL,
-  created_at TIMESTAMP DEFAULT NOW()
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  email text UNIQUE,
+  password text
 );
+
 ```
 
 ---
@@ -222,10 +224,32 @@ Click **Generate Application** to create your dynamic application instantly.
 
 ## 📤 CSV Import
 
-- Upload CSV files with matching column headers
-- Automatic validation before insertion
-- Supports bulk record insertion
+### Step-by-step Upload Process
 
+1. **Select CSV File**
+   - Choose a .csv file from your computer
+
+2. **Preview Data**
+   - See first 5 rows of your data
+   - Verify column headers match your app fields
+   - Review data before committing
+
+3. **Validation**
+   - Automatic field matching
+   - Missing/extra column detection
+   - Row-by-row error reporting
+
+4. **Confirm Upload**
+   - Review total row count
+   - Click confirm to insert all records
+   - Get detailed success/error feedback
+     
+### Error Handling
+
+- **Missing Fields**: Shows which required columns are missing
+- **Extra Fields**: Alerts you to unexpected columns
+- **Row-Level Errors**: Identifies specific rows with issues
+- **Ownership Check**: Validates you own the app before upload
 ---
 
 ## 📑 View Records
@@ -301,7 +325,8 @@ dynamic-app-generator/
 │   │   │   ├── DynamicTable.jsx
 │   │   │   ├── Navbar.jsx
 │   │   │   └── ProtectedRoute.jsx
-│   │   │
+│   │   │   └── InstallPrompt.jsx
+|   |   |
 │   │   ├── pages/
 │   │   │   ├── CreateApp.jsx
 │   │   │   ├── Dashboard.jsx
@@ -318,6 +343,7 @@ dynamic-app-generator/
 │   │
 │   ├── index.html
 │   ├── vite.config.js
+|   ├── generate-pwa-icons.js
 │   └── package.json
 │
 └── README.md
@@ -335,6 +361,24 @@ dynamic-app-generator/
 - Secure CORS Configuration
 
 ---
+## 3️⃣ Mobile-Ready Progressive Web App
+
+### Responsive Design
+
+- ✅ Fully responsive across all device sizes
+- ✅ Touch-optimized interface
+- ✅ Mobile-first navigation
+- ✅ Adaptive layouts (grid → stack on mobile)
+
+### PWA Capabilities (Optional Bonus)
+
+When PWA is enabled:
+
+- 📱 **Installable**: Add to home screen
+- 🔌 **Offline Support**: Cache assets for offline access
+- 🖼️ **Fullscreen Mode**: No browser chrome
+- 🚀 **Fast Loading**: Service worker caching
+- 📲 **App-Like Feel**: Native app experience
 
 # 🤝 Contributing
 
